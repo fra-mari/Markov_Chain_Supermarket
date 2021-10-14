@@ -6,13 +6,16 @@ _A project for simulating daily flows and customers' behaviour in a supermarket 
 
 
 
-This project runs a **Monte Carlo Simulation for predicting customers' behaviour in a fictional supermarket** over a working day. The supermarket has the simple architecture represented in the below picture. Customers enter the supermarket, freely move through its ailes and then leave the facility.  
+This project runs a **Monte Carlo Simulation for predicting customers' behaviour in a fictional supermarket** over a working day. Customers enter the supermarket, freely move through its ailes and then leave the facility.  
 
 | ![supermarket](img/supermarket.png) |
-| :---: |
+| :----------------------------------------------------------: |
+| <span style="color:grey"> <i><b>Fig. 1</b>: The simple architecture of the simulated supermarket</i></span> |
 
----
+
+
 ### Data Set
+
 The data set records the entrance time of each customer into the supermarket; minute by minute, it then follows their path through the ailes of the supermarket and finally to the checkout. 
 
 - The CSV files containing the raw daily data are available under `data/daily_attendance/raw`;
@@ -22,20 +25,20 @@ The user can **follow the various steps of the undertaken data preparation** in 
 
 |                  ![img](img/daily_flux.png)                  |
 | :----------------------------------------------------------: |
-| <span style="color:grey"><i>Rush hours are clearly visible around 9:00, 14:00 and 19:30</i></span> |
+| <span style="color:grey"> <i><b>Fig. 2</b>: Rush hours are clearly visible around 9:00, 14:00 and 19:30</i></span> |
 
 
 
-### Simulation
-The data set records the entrance time of each customer into the supermarket; minute by minute, it then follows their path through the ailes of the supermarket and finally to the  
-
-
+### Monte Carlo Markov Chain
+* **Transition Matrix**: Put in a nutshell, the Markov Chain algorithm predicts each customer's next movement based on their last position. This means that each location in the supermarket has to be associated with probabilities for a customer to move from there to any other location (or to remain there). Such a *Transition Matrix* is elaborated in the module `MCMC_Simulation/transition_matrix.py` based on the information extracted from `data/daily_attendance/cleaned_up/clean_final.csv`.
+* **Simulator**: The simulation is run by `supermarket.py`. Single customers are simulated as instances of the Python class `Customer`; their location inside the supermarket is updated based on transition matrix. The class `Supermarket` allows customers into the simulation in accordance with the described daily flows (fig. 2). When they reach the checkout, customers are removed from the simulation.  
 
 |                  ![gif](img/Simulator.gif)                  |
-| :---: |
-
+| :----------------------------------------------------------: |
+| <span style="color:grey"> <i><b>Fig. 3</b>: Example simulation</i></span> |
 
 ---
+
 ### How To Use This Code
 1. Clone this repository and `cd` into it.
 
