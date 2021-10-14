@@ -2,7 +2,7 @@
 
 _A project for simulating daily flows and customers' behaviour in a supermarket through a Monte Carlo Markov Chain_
 
-![made-with-python](https://img.shields.io/badge/Made%20with-Python-E8B90F.svg)![MIT license](https://img.shields.io/badge/License-MIT-orange.svg) ![Maintenance](https://img.shields.io/badge/Maintained%5F-yes-green.svg)
+![made-with-python](https://img.shields.io/badge/Made%20with-Python-E8B90F.svg) ![MIT license](https://img.shields.io/badge/License-MIT-orange.svg) ![Maintenance](https://img.shields.io/badge/Maintained%5F-yes-green.svg)
 
 
 
