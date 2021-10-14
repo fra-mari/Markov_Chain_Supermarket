@@ -133,3 +133,7 @@ visualisation.py
 
 #FOLDERS
 output/
+
+#DS_Store files
+
+.DS_Store
