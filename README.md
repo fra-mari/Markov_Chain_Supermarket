@@ -38,10 +38,15 @@ The data set records the entrance time of each customer into the supermarket; mi
 ---
 ### How To Use This Code
 1. Clone this repository and `cd` into it.
+
 2. Install the required Python libraries with `pip install -r requirements.txt`.
+
 3. `cd` into the folder `MCMC_Simulation`. 
+
 4. To launch the simulation, just run `python supermarket.py`! 
+
    **N.B.** _One simulated minute equals half a second of real life time, which means that one minute in real life time equals two hours in the simulated supermarket. Therefore, once started, **the simulation will run for about seven minutes**._ 
+
 5. You may retrieve the record of each simulation cycle in the folder `MCMC_Simulation/output`. 
 
 ---
